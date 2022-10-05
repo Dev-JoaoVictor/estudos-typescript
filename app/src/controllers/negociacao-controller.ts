@@ -47,17 +47,17 @@ export class NegociacaoController {
         this.atualizaView();
     }
 
-    impotarDados(): void {
+    public importaDados(): void {
         this.negociacoesService
             .obterNegociacoesDoDia()
             .then(negociacoesDeHoje => {
-                for (let negociacao of negociacoesDeHoje) {
-                    this.negociacoes.adiciona(negociacao)
+                for(let negociacao of negociacoesDeHoje) {
+                    this.negociacoes.adiciona(negociacao);
                 }
-                this.negociacoesView.update(this.negociacoes)
-            })
-
+                this.negociacoesView.update(this.negociacoes);
+            });
     }
+
     private ehDiaUtil(data: Date) {
         return data.getDay() > DiasDaSemana.DOMINGO
             && data.getDay() < DiasDaSemana.SABADO;

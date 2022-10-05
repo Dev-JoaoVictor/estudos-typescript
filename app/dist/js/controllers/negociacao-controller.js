@@ -32,7 +32,7 @@ export class NegociacaoController {
         this.limparFormulario();
         this.atualizaView();
     }
-    impotarDados() {
+    importaDados() {
         this.negociacoesService
             .obterNegociacoesDoDia()
             .then(negociacoesDeHoje => {

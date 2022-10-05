@@ -13,7 +13,7 @@ else {
 const botaoImporta = document.querySelector('#botao-importa');
 if (botaoImporta) {
     botaoImporta.addEventListener('click', () => {
-        controller.impotarDados();
+        controller.importaDados();
     });
 }
 else {
